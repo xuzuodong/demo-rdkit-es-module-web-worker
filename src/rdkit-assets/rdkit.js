@@ -6,6 +6,5 @@ import './RDKit_minimal'
 initRDKitModule().then((rdkit) => {
     var smiles = "CC(=O)Oc1ccccc1C(=O)O";
     var mol = rdkit.get_mol(smiles);
-    console.log();
     postMessage(mol.get_svg())
 })
